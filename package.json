@@ -1,0 +1,26 @@
+{
+  "name": "chrolo.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build-styles",
+    "build-styles": "node-sass src/styleSheets/index.scss static/style.css --source-map true",
+    "clean": "rm -f static/style.css static/style.css.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chrolo/Chrolo.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chrolo/Chrolo.github.io/issues"
+  },
+  "homepage": "https://github.com/Chrolo/Chrolo.github.io#readme"
+}

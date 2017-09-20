@@ -1,0 +1,66 @@
+//Sizes:
+$circle-size-lg: 250px;
+$circle-size-md: 150px;
+$circle-size-sm: 100px;
+
+//Colours:
+$circle-default-background-color: orange;
+$circle-hover-background-color: #F5F;
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    //Force to square:
+    &:after{
+      display: block;
+      content: "";
+      padding-bottom: 100%;
+    }
+}
+
+.circle-sizer-small{
+    width: $circle-size-sm;
+    font-size: 1rem;
+}
+
+.circle-sizer-medium{
+    width: $circle-size-md;
+    font-size: 2rem;
+}
+
+.circle-sizer-large{
+    width: $circle-size-lg;
+    font-size: 3.5rem;
+}
+
+.circle {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: $circle-default-background-color;
+
+    //text properties
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+
+    &.hover {
+        background-color: $circle-hover-background-color;
+        border: thick lighten($circle-hover-background-color,20%) solid;
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        transition: opacity 1s;
+
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

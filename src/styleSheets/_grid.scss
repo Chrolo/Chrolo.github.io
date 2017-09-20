@@ -1,0 +1,31 @@
+@import 'media-queries';
+
+$grid-cols : 12;
+
+.grid-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@function grid-col-width($colNum, $colTotal:$grid-cols){
+    @return (100/$colTotal)*$colNum * 1%;
+}
+
+@for $i from 1 through $grid-cols {
+  .grid-cell-#{$i}{
+    display: flex;
+    flex: 0 0 auto;
+    width: grid-col-width($i);
+  }
+}
+@media #{$mq-large}{
+  @for $i from 1 through $grid-cols {
+    .grid-cell-lg-#{$i}{
+      width: grid-col-width($i);
+    }
+  }
+}
