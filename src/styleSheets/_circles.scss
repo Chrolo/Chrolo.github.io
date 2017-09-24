@@ -41,6 +41,10 @@ $circle-hover-background-color: #F5F;
     height: 100%;
     background-color: $circle-default-background-color;
 
+    &:first-of-type{
+        box-shadow: 0 3px 3px 2px rgba(0,0,0,0.4);
+    }
+
     //text properties
     display: flex;
     flex-direction: column;

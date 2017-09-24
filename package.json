@@ -11,6 +11,7 @@
   "scripts": {
     "build": "npm run clean && npm run build-styles",
     "build-styles": "node-sass src/styleSheets/index.scss static/style.css --source-map true",
+    "build-styles:watch": "node-sass src/styleSheets/index.scss static/style.css --source-map true --watch",
     "clean": "rm -f static/style.css static/style.css.map"
   },
   "repository": {

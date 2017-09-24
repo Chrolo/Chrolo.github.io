@@ -103,6 +103,9 @@ table {
   .grid-cell-lg-12 {
     width: 100%; } }
 
+.grid-cell-padded {
+  padding: 10px; }
+
 .middle-center-content {
   display: flex;
   justify-content: space-around;
@@ -142,6 +145,8 @@ table {
   text-align: center;
   color: white;
   font-family: sans-serif; }
+  .circle:first-of-type {
+    box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.4); }
   .circle.hover {
     background-color: #F5F;
     border: thick #ffbbff solid;
@@ -157,6 +162,9 @@ table {
   transition: top 1s, left 1s;
   top: 0px;
   left: 0px; }
+
+body {
+  background-image: repeating-linear-gradient(-45deg, #ffeec3 0px, #ffeec3 30px, #fff5dd 30px, #fff5dd 60px); }
 
 #about-me-circle {
   order: -1; }

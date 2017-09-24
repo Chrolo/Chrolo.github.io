@@ -1,0 +1,12 @@
+$gradient-repeat: 30px;
+
+$colour1: rgb(255, 238, 195);//#e1f6f4;
+$colour2: lighten($colour1, 5%);
+
+body {
+    background-image: repeating-linear-gradient( -45deg,
+    $colour1 $gradient-repeat*0,
+    $colour1 $gradient-repeat*1,
+    $colour2 $gradient-repeat*1,
+    $colour2 $gradient-repeat*2);
+}
